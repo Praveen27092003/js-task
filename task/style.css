@@ -1,6 +1,17 @@
 textarea{
-    margin: 65px 400px;
-    border: 1px solid ;
+    margin: 100px 400px;
+    border: 1px solid;
+    box-shadow: 6px 9px 16px 5px brown;
+    filter:drop-shadow(1); 
+    transition: 1s;
+
+} 
+textarea:hover{
+    transition: 1s;
+    transform: scale(1.23); 
+
+}
+body{background: linear-gradient(45deg, #af2121, transparent);
 }
 .button{
     display: flex;
@@ -16,7 +27,7 @@ input{
     width: 240px;
     height: 30px;
     border-radius: 7px;
-    background: rgb(141, 210, 177);
+    background: rgb(18, 228, 200);
     color: white;
     font-weight: 600;
     border: 1px solid whitesmoke;
