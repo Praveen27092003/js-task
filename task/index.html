@@ -1,0 +1,102 @@
+<html>
+    <head>
+<title>js task</title>
+<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <h1>JAVASCRIPT TASK</h1>
+      <textarea placeholder="ENTER THE EMAIL AND URL TO GET SORTED CONTENT....." id="text-area" cols="60" rows="10"></textarea>
+       
+        <div class="button">
+        <div class="get-email">
+            <input type="button" value="get email with no duplicate" id="email-button" onclick="emailValidate()">
+        </div>
+        <div class="get-name">
+            <input type="button" value="get name by email " id="name-button" onclick="nameValidate()">
+        </div>
+        <div class="get-url">
+            <input type="button" value="get url" id="url-button" onclick="urlValidate()">
+        </div>
+      </div>
+    </body>
+</html>
+<script>
+    function emailValidate(){
+      var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var originalEmail = [];
+      var textBox = document.getElementById('text-area').value;
+      splitText = textBox.split(" ");
+      
+    for(var i=0;i<=splitText.length;i++){
+
+      if(emailFormat.test(splitText[i])){
+
+        if(originalEmail.indexOf(splitText[i]) == -1){
+
+        originalEmail.push(splitText[i]);
+       
+          }
+
+      }else{
+        
+      }
+      
+
+    }
+    console.log("---ORIGINAL EMAIL WITHOUT DUPLICATION---",originalEmail);
+    
+
+    }
+
+
+
+
+
+
+  function nameValidate(){
+       
+      var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var originalEmail = [];
+      var textBox = document.getElementById('text-area').value;
+      splitText = textBox.split(" ");
+      
+    for(var i=0;i<=splitText.length;i++){
+
+      if(emailFormat.test(splitText[i])){
+        var splitName = splitText[i].split('@');
+        var name =splitName[0];
+        if(name.length>=18){
+         var  name = name.substr(0,10)+"...";
+        }
+
+          if(originalEmail.indexOf(name) == -1){
+           originalEmail.push(name);
+          }
+ 
+      }
+   
+    }
+      console.log("---ORIGINAL EMAIL WITHOUT DUPLICATION---",originalEmail);
+  }
+      
+   
+
+
+function urlValidate(){
+      var textBox1 = document.getElementById('text-area').value;
+      var originalUrl = [];
+      var urlFormat = /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
+      splitText1 = textBox1.split(" ");
+      for(var i=0; i<=splitText1.length;i++){
+        if(urlFormat.test(splitText1[i])){
+          if(originalUrl.indexOf(splitText1[i])== -1){
+            originalUrl.push(splitText1[i]);
+          }
+        }
+      }
+   
+   console.log("---ORIGINAL URl WITHOUT DUPLICATION---",originalUrl);
+
+
+}
+</script>

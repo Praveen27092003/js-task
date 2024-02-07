@@ -1,0 +1,45 @@
+textarea{
+    margin: 65px 400px;
+    border: 1px solid ;
+}
+.button{
+    display: flex;
+    gap: 10px;
+    margin-left: 290px;
+}
+h1{
+    text-align: center;
+}
+input{
+    text-transform: uppercase;
+    display: block;
+    width: 240px;
+    height: 30px;
+    border-radius: 7px;
+    background: rgb(141, 210, 177);
+    color: white;
+    font-weight: 600;
+    border: 1px solid whitesmoke;
+}
+input:hover{
+    background: rgb(203, 133, 133);
+
+}
+.get-email{
+
+}
+.get-name{
+    
+}
+.get-url{
+    
+}
+.get-email input{
+
+}
+.get-name input{
+    
+}
+.get-url input{
+    
+}
